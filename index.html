@@ -1,62 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./normalize.css" rel="stylesheet" />
-    <link href="./ios.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <img src="./Photo.png" alt="Photo" class="header__Photo" />
-      <div class="header__textContainer">
-        <h1 class="header__title">Роман Арзамасцев</h1>
-        <h3 class="header__subtitle">Никогда не отказывайтесь от cвоей мечты😀😀😍.</h3>
-      </div>
-    </header>
-    <main>
-      <section class="links">
-        <h2 class="links__header">Доступен</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Телеграм</p>
-            <a class="linsk__link" href="https://web.telegram.org/a/">@Arzor02</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Эл. почта</p>
-            <a class="linsk__link" href="https://mail.yandex.ru"
-              >arzor134@yandex.ru</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Гит</p>
-            <a class="linsk__link" href="https://github.com/Arzor134"
-              >Arzor134</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section class="links">
-        <h2 class="links__header">Чем занимаюсь в свободное время</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Велоспорт</p>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Походы</p>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Прогулки</p>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Музыка</p>
-            <a href="https://music.yandex.ru/users/yamusic-my2023/playlists/197299948" onclick="playMusic(); return false;">Яндекс.Музыка</a>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <a class="button-link" href="">Жить хорошо!</a>
-    </footer>
-  </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        
+        .card {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px) brightness(60%);
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="Фон" class="background-image">
+        <div class="content">
+            <h1>Имя Фамилия</h1>
+            <p>Должность</p>
+            <a href="mailto:email@example.com">email@example.com</a><br>
+            <a href="tel:+79285331551">+7 (928) 533-15-51</a>
+        </div>
+    </div>
+</body>
 </html>
